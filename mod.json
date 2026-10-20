@@ -1,0 +1,44 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"version": "v1.1.0",
+	"id": "ai.predictivebuffer",
+	"name": "Predictive Input Buffer",
+	"developer": "lilWC",
+	"description": "Trajectory-based 1-2 frame press and wave release input buffer.",
+	"settings": {
+		"cycle-key": {
+			"type": "string",
+			"name": "Cycle Stage Key",
+			"description": "Key that cycles 2/2 -> 4/4 -> 8/8 -> 16/8 -> OFF. (The Fn key can't be used: Windows never sees it.)",
+			"default": "Right Ctrl",
+			"one-of": ["Right Ctrl", "Right Shift", "F6", "Insert", "Home", "Page Up", "Page Down"]
+		},
+		"label-opacity": {
+			"type": "int",
+			"name": "HUD Label Opacity",
+			"description": "Opacity of the stage label (0-255). Applies when a level is entered.",
+			"default": 128,
+			"min": 0,
+			"max": 255,
+			"control": { "slider": true, "input": true }
+		},
+		"label-scale": {
+			"type": "float",
+			"name": "HUD Label Scale",
+			"description": "Size of the stage label. Applies when a level is entered.",
+			"default": 0.4,
+			"min": 0.2,
+			"max": 1.0,
+			"control": { "slider": true, "input": true }
+		},
+		"debug-console": {
+			"type": "bool",
+			"name": "Debug Console",
+			"description": "Opens a console that logs every buffered input. Off by default.",
+			"default": false
+		}
+	}
+}
